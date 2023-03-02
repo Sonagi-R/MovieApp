@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <title>MovieApi</title>
+  </head>
+  <body>
+    <main>
+      <form id="searchForm">
+        <input type="text" id="searchBar" placeholder="Search a movie" />
+        <input type="submit" id="searchButton" value="search" />
+      </form>
+
+      <section id="content">
+        <img id="movieImage" src="https://placehold.jp/150x150.png" alt="" />
+        <article>
+          <h1 id="movieTitle">Movie Title</h1>
+          <h2>Rating</h2>
+          <h3>TV-14 2022- N/A</h3>
+          <div id="categories"></div>
+        </article>
+      </section>
+
+      <section id="details">
+        <h2 class="detailHeader">Plot:</h2>
+        <p id="moviePlot"></p>
+        <h2 class="detailHeader">Cast:</h2>
+        <p id="movieCast"></p>
+      </section>
+    </main>
+  </body>
+</html>
