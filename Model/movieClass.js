@@ -24,13 +24,14 @@ class Movie {
     }
 
     static create(newMovie) {
-        newMovie['id'] = movies.length + 1
+        newMovie['id'] = movies[movies.length - 1]['id'] + 1
         movies.push(newMovie)
         return new Movie(newMovie)
     }
 
     static destroy(idx) {
-        movies.map(m => new Movie(m)).splice(idx - 1, 1)
+        const movie = movies.find(m => m.id === idx)
+        movies.splice(movies.indexOf(movie), 1)
         return movies
     }
 
