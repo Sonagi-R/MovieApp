@@ -1,0 +1,102 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(180deg, #a5bdfd 50%, #d9f2ff 50%);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+::placeholder{
+    color: white;
+}
+
+main{
+    width: 600px;
+    padding: 60px;
+    background-color: #2b4450;
+    border-radius: 20px;
+}
+
+#searchForm{
+    display: block;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#searchBar{
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    border: 1px solid rgb(165, 165, 165);
+    height: 60%;
+    padding-left: 10px;
+    width: 350px;
+    border-radius: 5px;
+}
+
+#searchButton{
+    background-color: rgb(255, 158, 39);
+    color: black;
+    border: none;
+    height: 60%;
+    width: 100px;
+    border-radius: 5px;
+}
+
+#searchBar, #searchButton{
+    font-size: small;
+    font-weight: 400;
+}
+
+#content{
+    display: none;
+    width: 500px;
+}
+
+#details{
+    display: none;
+}
+
+img{
+    margin:5% 0;
+    height: 300px;
+    width: 200px;
+    border-radius: 5px;
+    background-size: cover;
+}
+
+article{
+    display: inline-block;
+    text-align: center;
+    flex-grow: 1;
+}
+
+h1{
+    font-size: xx-large;
+    margin-bottom: 0;
+}
+
+h2{
+    font-size: large;
+    margin-bottom: 30px;
+}
+
+h3{
+    font-weight: 200;
+}
+
+.detailHeader{
+    margin-bottom: 5px;
+}
+
+p{
+    margin-top: 0;
+}
