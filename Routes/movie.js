@@ -12,4 +12,6 @@ router.post('/', movies.create)
 
 router.delete('/:id', movies.destroy)
 
+router.patch('/:id', movies.update)
+
 module.exports = router

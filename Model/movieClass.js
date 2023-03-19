@@ -2,11 +2,12 @@ const movies = require('../movies')
 
 class Movie {
 
-    constructor(title, description, date, cast) {
-        this.description = description;
-        this.title = title;
-        this.date = date;
-        this.cast = cast;
+    constructor(movie) {
+        this.title = movie.title;
+        this.description = movie.description;
+        this.date = movie.date;
+        this.cast = movie.cast;
+        this.id = movie.id
     }
 
     static showAll() {
@@ -33,6 +34,15 @@ class Movie {
         const movie = movies.find(m => m.id === idx)
         movies.splice(movies.indexOf(movie), 1)
         return movies
+    }
+
+    static update(updateMovie, idx) {
+        const movie = movies.find(m => m.id === idx)
+        movie['title'] = updateMovie.title
+        movie['description'] = updateMovie.description
+        movie['cast'] = updateMovie.cast
+        return new Movie(movie)
+
     }
 
 }

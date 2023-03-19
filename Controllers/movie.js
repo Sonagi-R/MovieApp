@@ -34,8 +34,18 @@ async function destroy(req, res) {
         const newMovies = await Movie.destroy(idx)
         res.status(200).send(newMovies)
     } catch (error) {
-        res.status(500).send({error: "Error with the movie database - destroy"})
+        res.status(500).send({error: "Error with the movie database"})
     }
 }
 
-module.exports = {index, show, create, destroy}
+async function update(req, res) {
+    const idx = parseInt(req.params.id)
+    try {
+        const updatedMovie = await Movie.update(req.body, idx)
+        res.status(200).send(updatedMovie)
+    } catch (error) {
+        res.status(500).send({error: "Error with the movie database"})
+    }
+}
+
+module.exports = {index, show, create, destroy, update}
