@@ -1,4 +1,4 @@
-
+const apiKey = "a23e5fd8"
 const searchForm = document.querySelector('#searchForm')
 const movieTitle = document.querySelector('#movieTitle')
 const movieImage = document.querySelector('#movieImage')
