@@ -6,7 +6,7 @@ const movies = require('../Controllers/movie')
 
 router.get('/', movies.index)
 
-router.get('/:id', movies.show)
+router.get('/:name', movies.show)
 
 router.post('/', movies.create)
 

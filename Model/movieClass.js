@@ -4,6 +4,7 @@ class Movie {
 
     constructor(movie) {
         this.title = movie.title;
+        this.poster = movie.poster;
         this.description = movie.description;
         this.date = movie.date;
         this.cast = movie.cast;
@@ -14,8 +15,8 @@ class Movie {
         return movies.map(m => new Movie(m))
     }
 
-    static show(idx) {
-        const movie = movies.find(m => m.id === idx)
+    static show(movieName) {
+        const movie = movies.find(m => m.title === movieName)
 
         if (movie) {
             return new Movie(movie)
@@ -42,7 +43,6 @@ class Movie {
         movie['description'] = updateMovie.description
         movie['cast'] = updateMovie.cast
         return new Movie(movie)
-
     }
 
 }

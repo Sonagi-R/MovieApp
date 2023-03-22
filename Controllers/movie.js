@@ -10,9 +10,9 @@ async function index(req, res) {
 }
 
 async function show(req, res) {
-    const idx = parseInt(req.params.id)
+    const movieName = req.params.name
     try {
-        const movie = await Movie.show(idx)
+        const movie = await Movie.show(movieName)
         res.status(200).send(movie)
     } catch (error) {
         res.status(404).send({error:"Movie not found"})
