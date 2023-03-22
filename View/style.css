@@ -1,12 +1,20 @@
+:root {
+    --dark-slate-gray: #384753;
+    --khaki: #b0a084ff;
+    --moonstone: #009fb7ff;
+    --dark-moonstone: ;
+    --light-sand: #FEF9DC;
+    --thistle: #d4c1ecff;
+}
+
 body{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
-    height: 100vh;
-    overflow: hidden;
-    background: linear-gradient(180deg, #a5bdfd 50%, #d9f2ff 50%);
+    color: black;
+    height: 100dvh;
+    background-color: var(--dark-slate-gray);
 }
 
 *{
@@ -14,13 +22,13 @@ body{
 }
 
 ::placeholder{
-    color: white;
+    color: black;
 }
 
 main{
     width: 600px;
     padding: 60px;
-    background-color: #2b4450;
+    background-color: white;
     border-radius: 20px;
 }
 
@@ -34,7 +42,7 @@ main{
 
 #searchBar{
     background-color: rgba(255, 255, 255, 0);
-    color: white;
+    color: black;
     border: 1px solid rgb(165, 165, 165);
     height: 60%;
     padding-left: 10px;
@@ -43,16 +51,21 @@ main{
 }
 
 #searchButton{
-    background-color: rgb(255, 158, 39);
-    color: black;
+    background-color: var(--moonstone);
+    color: white;
     border: none;
     height: 60%;
     width: 100px;
     border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#searchButton:hover{
+    background-color: rgb(4, 126, 145);
+    transition: all 0.2s;
 }
 
 #searchBar, #searchButton{
-    font-size: small;
+    font-size: medium;
     font-weight: 400;
 }
 
